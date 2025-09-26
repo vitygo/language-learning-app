@@ -1,12 +1,5 @@
+import "./Footer.css";
 
-
-
-
-import "Footer.css"
-
-
-export default function Footer(){
-    return (
-        <div className=""></div>
-    )
+export default function Footer() {
+  return <div className=""></div>;
 }

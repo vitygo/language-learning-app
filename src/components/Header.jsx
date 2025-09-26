@@ -1,8 +1,12 @@
-import "Header.css"
+import "./Header.css";
+import { useSelector } from "react-redux";
 
-
-export default function Header(){
-    return (
-        <div className=""></div>
-    )
+export default function Header() {
+  const currentLanguage = useSelector((state) => state.language.value);
+  return (
+    <header>
+      <p>{currentLanguage}</p>
+      <p className="header__logo">Logo</p>
+    </header>
+  );
 }

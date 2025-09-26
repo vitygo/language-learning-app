@@ -1,4 +1,4 @@
-import "LearningPage.css"
+import "./LearningPage.css"
 
 
 export default function LearningPage(){
