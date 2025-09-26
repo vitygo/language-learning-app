@@ -1,3 +1,12 @@
-.laguageCard{
+.language-card{
+    display: flex;
     cursor: pointer;
+    background: rgb(0, 255, 179) !important;
+    height: 300px; 
+    width: 300px;
+    color: black;
+}
+
+.language-card:hover{
+    background: red;
 }
