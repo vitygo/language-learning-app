@@ -1,6 +1,7 @@
 import "./LearningPage.css";
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { TbSwords } from "react-icons/tb";
 
 export default function LearningPage() {
   const language = useSelector((state) => state.language.value);
@@ -42,19 +43,24 @@ export default function LearningPage() {
 export function LevelBlock() {
   return (
     <div className="level-block">
-      <Level />
-      <Level moveLeft={"110px"} />
+      <Level moveLeft={"none"} position={"static"} />
+      <Level moveLeft={"90px"} />
       <Level moveLeft={"10px"} />
-      <Level moveLeft={"60px"} />
+      <Level moveLeft={"-70px"} />
       <Level moveLeft={"10px"} />
     </div>
   );
 }
 
-export function Level({ moveLeft }) {
+export function Level({ moveLeft, position }) {
   return (
     <div className="level">
-      <div className="level__button" style={{ left: moveLeft }}></div>
+      <div
+        className="level__button"
+        style={{ left: moveLeft, position: position }}
+      >
+        <TbSwords size="40px" color="rgba(0, 0, 0, 0.254)" />
+      </div>
     </div>
   );
 }
