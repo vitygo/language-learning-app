@@ -22,8 +22,10 @@ export function LanguageCard({languageProp}){
     const dispatch = useDispatch();
     
     return(
-        <Link to='/dashboard' className="languageCard" onClick={() => dispatch(changeLanguage(languageProp))}>
+      <div className="language-card">
+        <Link to='/dashboard' className="" onClick={() => dispatch(changeLanguage(languageProp))}>
             <h2>{languageProp}</h2>
         </Link>
+      </div>
     )
 }

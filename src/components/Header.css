@@ -5,6 +5,8 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+    background: rgb(19 31 36);
+    border-bottom: 2px solid rgb( 55 70 79);
 
     
 }
@@ -14,6 +16,7 @@ header{
     font-family: sans-serif;
     font-weight: bold;
     font-size: 2rem;
-    color: orange;
+    color: #fc5d3b;
 
 }
+
