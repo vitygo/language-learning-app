@@ -6,7 +6,7 @@ export default function LearningPage() {
   const language = useSelector((state) => state.language.value);
   const coins = useSelector((state) => state.coin.value);
   const hearts = useSelector((state) => state.heart.value);
-  const score = useSelector((state) => state.score.value)
+  const score = useSelector((state) => state.score.value);
 
   return (
     <div className="learning-page">
@@ -34,6 +34,27 @@ export default function LearningPage() {
           <h3 className="unit-badge__name">Form basic sentences</h3>
         </div>
       </div>
+      <LevelBlock />
+    </div>
+  );
+}
+
+export function LevelBlock() {
+  return (
+    <div className="level-block">
+      <Level />
+      <Level moveLeft={"110px"} />
+      <Level moveLeft={"10px"} />
+      <Level moveLeft={"60px"} />
+      <Level moveLeft={"10px"} />
+    </div>
+  );
+}
+
+export function Level({ moveLeft }) {
+  return (
+    <div className="level">
+      <div className="level__button" style={{ left: moveLeft }}></div>
     </div>
   );
 }

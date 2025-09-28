@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
 
 header{
     width: 100%;
@@ -14,9 +16,13 @@ header{
 
 .header__logo{
     font-family: sans-serif;
-    font-weight: bold;
     font-size: 2rem;
     color: #fc5d3b;
+    /* optonal */
+    font-family: "Rubik Doodle Shadow", system-ui; 
+    /* optonal */
+    font-family: "Rubik Moonrocks", sans-serif;
+
 
 }
 

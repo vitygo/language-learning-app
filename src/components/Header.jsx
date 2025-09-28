@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <header>
       {/* <p>{currentLanguage}</p> */}
-      <p className="header__logo">Logo</p>
+      <p className="header__logo">Hoplingo</p>
     </header>
   );
 }
