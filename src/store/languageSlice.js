@@ -1,14 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  value: "english",
+  value: { languageName: "english", img: "./eng-flag.png" },
 };
 
 const languageSlice = createSlice({
   name: "language",
   initialState,
   reducers: {
-    changeLanguage: (state, action) => {state.value = action.payload},
+    changeLanguage: (state, action) => {
+      state.value = action.payload;
+    },
   },
 });
 

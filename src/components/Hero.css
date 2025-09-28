@@ -73,7 +73,12 @@
 .buttons__btn a{
     text-decoration: none;
     color: white;
+   
 
+}
+
+.btn__link{
+    width: 100% !important;
 }
 
 .buttons__btn--white{
