@@ -1,6 +1,5 @@
-
+import "./Profile.css";
 
 export default function Profile() {
-    return <div className="">prifile</div>;
-  }
-  
+  return <div className="profile-page">prifile</div>;
+}

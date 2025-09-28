@@ -2,13 +2,13 @@ import "./UserDashboardPage.css";
 import { Link, Routes, Route } from "react-router-dom";
 // import Hero from "../components/Hero";
 import LanguageOption from "../components/LanguageOption";
-import {Outlet} from "react-router-dom"
+import { Outlet } from "react-router-dom";
 
 export default function UserDashboardPage() {
   return (
     <div className="user-dashboard-page">
       <SideMenu />
-        <Outlet/>
+      <Outlet />
     </div>
   );
 }
@@ -20,16 +20,24 @@ export function SideMenu() {
       <div className="side-menu__body">
         <ul>
           <li>
-            <Link to="learn">LEARN</Link>
+            <Link to="learn">
+              <img className="body__links-icon" src="./icon-learn.png" alt="" />
+            </Link>
           </li>
           <li>
-            <Link to="quest">QUEST</Link>
+            <Link to="quest">
+              <img className="body__links-icon" src="./icon-quest.png" alt="" />
+            </Link>
           </li>
           <li>
-            <Link to="profile">PROFILE</Link>
+            <Link to="profile">
+              <img className="body__links-icon" src="./icon-bunny.png" alt="" />
+            </Link>
           </li>
           <li>
-            <Link to="more">MORE</Link>
+            <Link to="more">
+              <img className="body__links-icon" src="./icon-more.png" alt="" />
+            </Link>
           </li>
         </ul>
       </div>

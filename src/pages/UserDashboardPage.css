@@ -5,12 +5,15 @@
 .dashboard__side-menu{
     position: fixed;
     bottom: 0;
-    height: 6vh;
+    height: 9vh;
     width: 100%;
     background: rgb(19 31 36);
     border-top: 2px solid rgb( 55 70 79);
     display: flex;
-    align-items: center;
+    align-items: center !important;
+    justify-content: center !important;
+
+
   
     
 
@@ -29,6 +32,22 @@
 .side-menu__body ul{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center !important;
     width: 100%;
+}
+
+ul li, a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 130%;
+
+    list-style: none;
+    width: none !important;
+    
+}
+
+.body__links-icon{
+    width: 45%;
+    height: auto;
 }
