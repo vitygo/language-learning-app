@@ -6,6 +6,7 @@ export default function LearningPage() {
   const language = useSelector((state) => state.language.value);
   const coins = useSelector((state) => state.coin.value);
   const hearts = useSelector((state) => state.heart.value);
+  const score = useSelector((state) => state.score.value)
 
   return (
     <div className="learning-page">
@@ -21,7 +22,7 @@ export default function LearningPage() {
           </div>
           <div className="info__elements elements--score">
             <img src="./cup.png" className="elements__img" />
-            <p className="elements__data data--score">130</p>
+            <p className="elements__data data--score">{score}</p>
           </div>
           <div className="info__elements elements--heart">
             <img src="./heart.png" className="elements__img" />
