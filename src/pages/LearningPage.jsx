@@ -1,17 +1,31 @@
 import "./LearningPage.css";
-import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 
 export default function LearningPage() {
   const language = useSelector((state) => state.language.value);
-
+  const coins = useSelector((state) => state.coin.value);
+  const hearts = useSelector((state) => state.heart.value);
 
   return (
     <div className="learning-page">
       <div className="learing-page__header">
         <div className="header__info">
-          <div className="info__language">
-            <img src={language.img} className="info__language-img" />
+          <div className="info__elements elements--language">
+            <img src={language.img} className="elements__img img--language" />
+            <p className="elements__data"></p>
+          </div>
+          <div className="info__elements elements--coins">
+            <img src="./coin.png" className="elements__img" />
+            <p className="elements__data data--coins">{coins}</p>
+          </div>
+          <div className="info__elements elements--score">
+            <img src="./cup.png" className="elements__img" />
+            <p className="elements__data data--score">130</p>
+          </div>
+          <div className="info__elements elements--heart">
+            <img src="./heart.png" className="elements__img" />
+            <p className="elements__data data--heart">{hearts}</p>
           </div>
         </div>
         <div className="header__unit-badge">

@@ -39,7 +39,10 @@
 .header__info{
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 2%;
+    padding-left: 0px;
+    padding-right: 2.5%;
     
 }
 
@@ -48,9 +51,42 @@
     font-size: 1.5rem;
 }
 
-.info__language-img{
-    width: 10%;
+
+
+.info__elements{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.elements__img{
+    width: 50%;
     height: auto;
     border-radius: 50%;
+    
+}
+
+.elements__img.img--language{
+    width: 35% !important;
+    height: auto;
     border: 2px solid rgba(255, 255, 255, 0.849);
+}
+
+.elements__data{
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+}
+
+.data--coins{
+    color: rgba(255, 153, 0, 0.838);
+}
+
+.data--score{
+    color: rgba(255, 153, 0, 0.838);
+}
+
+.data--heart{
+    color: rgba(240, 81, 81, 0.884);
 }
