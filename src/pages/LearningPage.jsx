@@ -53,14 +53,18 @@ export function LevelBlock() {
 }
 
 export function Level({ moveLeft, position }) {
+  const [levelBadgeOpen, setLevelBadgeOpen] = useState(false);
   return (
     <div className="level">
       <div
         className="level__button"
+        onClick={() => setLevelBadgeOpen(prev => !prev)}
         style={{ left: moveLeft, position: position }}
       >
         <TbSwords size="40px" color="rgba(0, 0, 0, 0.254)" />
+        <div className={`level__badge ${levelBadgeOpen ? "active" : ""}`}></div>
       </div>
+
     </div>
   );
 }
