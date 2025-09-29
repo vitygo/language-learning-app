@@ -22,21 +22,26 @@ export function SideMenu() {
           <li>
             <Link to="learn">
               <img className="body__links-icon" src="./icon-learn.png" alt="" />
+              <p className='section-name'>LEARN</p>
+
             </Link>
           </li>
           <li>
             <Link to="quest">
               <img className="body__links-icon" src="./icon-quest.png" alt="" />
+              <p className='section-name'>QUEST</p>
             </Link>
           </li>
           <li>
             <Link to="profile">
               <img className="body__links-icon" src="./icon-bunny.png" alt="" />
+              <p className='section-name'>PROOFILE</p>
             </Link>
           </li>
           <li>
             <Link to="more">
               <img className="body__links-icon" src="./icon-more.png" alt="" />
+              <p className='section-name'>MORE</p>
             </Link>
           </li>
         </ul>

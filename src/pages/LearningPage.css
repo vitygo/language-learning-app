@@ -189,3 +189,35 @@
     padding: 2% 4%;
     color: #fc5d3b;
 }
+
+
+@media (min-width: 576px) {
+    .level__button{
+        height: 100% !important;
+        width: 20%;
+ 
+    }
+    .header__info{
+
+        width: 80%;
+        height: 4rem;
+        background: rgb(19 31 36);
+    }
+    
+    .header__unit-badge{
+        width: 70%;
+
+        
+    
+    }
+
+    .level__badge{
+        z-index: 12000;
+    }
+    .learing-page__header{
+        z-index: 12000;
+    }
+ 
+
+
+}

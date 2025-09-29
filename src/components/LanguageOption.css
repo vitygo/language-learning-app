@@ -64,3 +64,53 @@
     background: red;
 
 }
+
+@media (min-width: 576px) {
+
+.language-card__flag-img{
+    height: auto;
+    width: 25%;
+}
+
+ }
+
+ @media (min-width: 992px) {
+
+.language-options h1{
+    padding-top: 5%;
+    
+
+}
+
+.language-card__flag-img{
+    height: auto;
+    width: 50%;
+}
+
+
+.language-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(255, 255, 255) !important;
+    height: 270px; 
+    width: 15%;
+    color: black;
+    cursor: pointer;
+    background: #fc5d3b !important;
+    border-radius: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    border-bottom: 5px solid #d13a18;
+    
+}
+.language-options__grid{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    gap: 10px;
+    padding-top: 10%;
+
+}
+ }
