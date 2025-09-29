@@ -97,7 +97,7 @@
 .level-block{
     padding-top: 12rem;
     width: 100vw;
-    height: 80vh;
+    height: 80vh !important;
 
 }
 
@@ -106,7 +106,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    height: 20%;
+    height: 20% !important;
 }
 
 .level__button{
@@ -115,7 +115,7 @@
     align-items: center;
     position: relative;
     left: 40px;
-    height: 95%;
+    height: 95% !important;
     width: 25%;
     border-radius: 45%;
     border-bottom: 11px solid rgba(0, 0, 0, 0.154);
