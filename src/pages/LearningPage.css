@@ -114,7 +114,6 @@
     justify-content: center;
     align-items: center;
     position: relative;
-
     left: 40px;
     height: 95%;
     width: 25%;
@@ -132,13 +131,19 @@
 .level__badge{
     position: absolute;
     z-index: 6000;
-    bottom: -150%;
-    height: 130px;
-    width: 200px;
-    background: rgb(203, 26, 26);
+    top: 95%;
+    min-height: 120px;
+    width: 190px;
+    background:  #fc5d3b;;
     border-radius: 12px;
     transform: scale(0);
     transition: 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1%;
+    padding-top: 2%;
+    gap: 10px;
 
 
 }
@@ -148,7 +153,7 @@
     position: absolute;
     height: 30px;
     width: 30px;
-    background: rgb(203, 26, 26);
+    background:  #fc5d3b;;
     transform: rotate(45deg);
     top: 0;
     z-index: 300;
@@ -159,4 +164,28 @@
 
 .level__badge.active{
     transform: scale(1)
+}
+
+
+.badge__text, .badge__button, .badge__text__title{
+    position: relative;
+    z-index: 301;
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+
+.badge__text__title{
+    font-size: 1rem;
+}
+
+.badge__button{
+    width: 90%;
+    height: 2rem;
+    border-radius: 10px;
+    background: white;
+    border: none;
+    border-bottom: 4px solid #cccccc;
+    font-family: "Poppins", sans-serif;
+    padding: 2% 4%;
+    color: #fc5d3b;
 }

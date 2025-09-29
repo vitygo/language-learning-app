@@ -2,7 +2,9 @@ import "./LearningPage.css";
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { TbSwords } from "react-icons/tb";
-
+import { Link } from "react-router-dom";
+import LevelPage from "./LevelPage";
+import { Outlet } from "react-router-dom";
 export default function LearningPage() {
   const language = useSelector((state) => state.language.value);
   const coins = useSelector((state) => state.coin.value);
@@ -58,13 +60,22 @@ export function Level({ moveLeft, position }) {
     <div className="level">
       <div
         className="level__button"
-        onClick={() => setLevelBadgeOpen(prev => !prev)}
+        onClick={() => setLevelBadgeOpen(true)}
         style={{ left: moveLeft, position: position }}
       >
         <TbSwords size="40px" color="rgba(0, 0, 0, 0.254)" />
-        <div className={`level__badge ${levelBadgeOpen ? "active" : ""}`}></div>
       </div>
-
+      <div className={`level__badge ${levelBadgeOpen ? "active" : ""}`}>
+        <h3 className="badge__text__title">Form Basuc sentence</h3>
+        <p className="badge__text">lesaon 1 of 4</p>
+        <Link
+          to="/dashboard/level"
+          onClick={() => setLevelBadgeOpen(false)}
+          className="badge__button"
+        >
+          START
+        </Link>
+      </div>
     </div>
   );
 }
