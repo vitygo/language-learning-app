@@ -221,3 +221,132 @@
 
 
 }
+
+@media (min-width: 992px) {
+    .learning-page{
+        height: 1000vh;
+        width: 100%;
+        background: #131f24;
+        margin-left: 20vw;
+    }
+    
+    .learing-page__header{
+        width: 60%;
+        height: auto;
+        position: fixed;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    
+    .header__info{
+        width: 70%;
+        height: 4rem;
+        background: rgb(19 31 36);
+    }
+    
+    .header__unit-badge{
+        width: 70%;
+        height: 6rem;
+        border-radius: 15px;
+        background: #fc5d3b;
+        border-bottom: 5px solid #d13a18;
+        font-family: "Poppins", sans-serif;
+        padding: 2% 4%;
+        
+    
+    }
+    
+    .unit-badge__number{
+        color: rgba(255, 255, 255, 0.674);
+        font-size: 1.5rem;
+        font-weight: 500;
+    
+    }
+    .header__info{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2%;
+        padding-left: 0px;
+        padding-right: 2.5%;
+        
+    }
+    
+    .unit-badge__name{
+        color: white;
+        font-size: 1.5rem;
+    }
+    
+    
+    
+    .info__elements{
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .elements__img{
+        width: 35%;
+        height: auto;
+        border-radius: 50%;
+        
+    }
+    
+    .elements__img.img--language{
+        width: 24% !important;
+        height: auto;
+        border: 2px solid rgba(255, 255, 255, 0.849);
+    }
+    
+    .elements__data{
+        color: white;
+        font-family: "Poppins", sans-serif;
+        font-weight: bold;
+    }
+    
+    .data--coins{
+        color: rgba(255, 153, 0, 0.838);
+    }
+    
+    .data--score{
+        color: rgba(255, 153, 0, 0.838);
+    }
+    
+    .data--heart{
+        color: rgba(240, 81, 81, 0.884);
+    }
+    
+    .level-block{
+        padding-top: 12rem;
+        width: 100vw;
+        height: 80vh !important;
+    
+    }
+    
+    .level{
+        position: relative;
+        width: 60% !important;
+        display: flex;
+        justify-content: center;
+        height: 20% !important;
+    }
+    
+    .level__button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        left: 40px;
+        height: 95% !important;
+        width: 11%;
+        border-radius: 45%;
+        border-bottom: 11px solid rgba(0, 0, 0, 0.154);
+        background: rgba(255, 255, 255, 0.714);
+        transition: 0.1s ease;
+    }
+
+}

@@ -7,7 +7,7 @@ export default function LevelPage() {
   const heart = useSelector((state) => state.heart.value);
 
   return (
-    <div className="level">
+    <div className="level-container">
       <div className="level__header">
         <div className="header__button">
           <Link to="/dashboard">
