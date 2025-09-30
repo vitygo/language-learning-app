@@ -160,7 +160,6 @@ const lessons = [
   },
 ];
 
-
 export default function LearningPage() {
   const language = useSelector((state) => state.language.value);
   const coins = useSelector((state) => state.coin.value);
@@ -199,16 +198,22 @@ export default function LearningPage() {
 }
 
 export function LevelBlock() {
+  const total = lessons.length;
   return (
     <div className="level-block">
-      {lessons.map((lesson) => (
-        <Level key={lesson.lessonNumber} lesson={lesson} />
+      {lessons.map((lesson, index) => (
+        <Level
+          total={total}
+          key={lesson.lessonNumber}
+          lesson={lesson}
+          index={index}
+        />
       ))}
     </div>
   );
 }
 
-export function Level({ lesson }) {
+export function Level({ lesson, index, total }) {
   const game = useSelector((state) => state.game.value);
 
   const badgeRef = useRef(null);
@@ -228,10 +233,24 @@ export function Level({ lesson }) {
   }, []);
 
   const dispatch = useDispatch();
+  const mid = (total - 1) / 2;
 
+  const maxLeft = 220;
+  const minLeft = 150;
+
+  let leftPosition;
+  if (index <= mid) {
+    leftPosition = minLeft + ((maxLeft - minLeft) / mid) * index;
+  } else {
+    leftPosition = maxLeft - ((maxLeft - minLeft) / mid) * (index - mid);
+  }
   return (
     <div className="level" ref={badgeRef}>
-      <div className="level__button" onClick={() => setLevelBadgeOpen(true)}>
+      <div
+        className="level__button"
+        style={{ left: leftPosition, position: "absolute" }}
+        onClick={() => setLevelBadgeOpen(true)}
+      >
         <TbSwords size="40px" color="rgba(0, 0, 0, 0.254)" />
       </div>
       <div className={`level__badge ${levelBadgeOpen ? "active" : ""}`}>

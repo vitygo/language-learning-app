@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { decrement } from "../store/heartSlice";
+import toast, { Toaster } from "react-hot-toast";
 
 export default function LevelPage() {
   const game = useSelector((state) => state.game.value);
@@ -70,6 +71,29 @@ export function Option({
 
   function checkAnswer() {
     if (text === correctAnswer) {
+      toast.custom(
+        (t) => (
+          <div
+            style={{
+              top: "80px",
+              position: "relative",
+              padding: "8px 16px",
+              borderRadius: "8px",
+              color: "yellow",
+              fontWeight: "bold",
+              fontSize: "18px",
+              background: "transparent", // no background
+              fontFamily: "Poppins",
+            }}
+          >
+            + 10 to your score!
+          </div>
+        ),
+        {
+          duration: 500,
+        }
+      );
+
       const nextProgress = progresBar + 25; // calculate next progress
       setProgresBar(nextProgress);
 

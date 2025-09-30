@@ -9,9 +9,12 @@ import Quest from "./pages/Quest";
 import Profile from "./pages/Profile";
 import LevelPage from "./pages/LevelPage";
 import { LevelBlock } from "./pages/LearningPage";
+import { Toaster } from "react-hot-toast";
+
 function App() {
   return (
     <>
+      <Toaster position="top-center" reverseOrder={false} />
       <Routes>
         <Route path="/" element={<MainPage />}>
           <Route index element={<Hero />} />
