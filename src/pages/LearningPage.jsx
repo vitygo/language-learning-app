@@ -60,6 +60,12 @@ const lessons = [
         correctAnswer: "krowa",
         AnswerOptions: ["kot", "pies", "krowa", "mysz"],
       },
+      {
+        id: 4,
+        question: "Which one of these is “the mouse”?",
+        correctAnswer: "mysz",
+        AnswerOptions: ["kot", "pies", "krowa", "mysz"],
+      },
     ],
   },
   {
@@ -82,6 +88,12 @@ const lessons = [
         id: 3,
         question: "Which one of these is “pear”?",
         correctAnswer: "gruszka",
+        AnswerOptions: ["jablko", "banan", "gruszka", "pomarancza"],
+      },
+      {
+        id: 4,
+        question: "Which one of these is “apple”?",
+        correctAnswer: "jablko",
         AnswerOptions: ["jablko", "banan", "gruszka", "pomarancza"],
       },
     ],
@@ -108,6 +120,12 @@ const lessons = [
         correctAnswer: "zolty",
         AnswerOptions: ["zielony", "czerwony", "zolty", "niebieski"],
       },
+      {
+        id: 4,
+        question: "Which one of these is “green”?",
+        correctAnswer: "zielony",
+        AnswerOptions: ["zielony", "czerwony", "zolty", "niebieski"],
+      },
     ],
   },
   {
@@ -132,9 +150,16 @@ const lessons = [
         correctAnswer: "trzy",
         AnswerOptions: ["jeden", "trzy", "dwa", "cztery"],
       },
+      {
+        id: 4,
+        question: "Which one of these is “four”?",
+        correctAnswer: "cztery",
+        AnswerOptions: ["jeden", "dwa", "trzy", "cztery"],
+      },
     ],
   },
 ];
+
 
 export default function LearningPage() {
   const language = useSelector((state) => state.language.value);

@@ -5,6 +5,7 @@ import { IoClose } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { decrement } from "../store/heartSlice";
 
 export default function LevelPage() {
   const game = useSelector((state) => state.game.value);
@@ -63,6 +64,8 @@ export function Option({
   setProgresBar,
   setCurrentQ,
 }) {
+  const heart = useSelector((state) => state.heart.value);
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   function checkAnswer() {
@@ -74,6 +77,11 @@ export function Option({
         navigate("/dashboard"); // navigate if finished
       } else {
         setCurrentQ((prev) => prev + 1); // go to next question
+      }
+    } else {
+      dispatch(decrement());
+      if (heart === 1) {
+        navigate("/dashboard");
       }
     }
   }
